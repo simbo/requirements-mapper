@@ -1,6 +1,7 @@
 'use strict';
 
-var assert = require('assert');
+var assert = require('assert'),
+    path = require('path');
 
 var pgkJson = require('../package.json'),
     pkgName = pgkJson.name,
@@ -33,6 +34,10 @@ describe(pkgName, function() {
 
     it('should overwrite the required contents of a file if there is a directory with the same name on the same level', function() {
         assert.deepEqual(pkg('fixtures/overwrite'), expectations.overwrite);
+    });
+
+    it('should accept absolute paths', function() {
+        assert.deepEqual(pkg(path.join(process.cwd(), 'test/fixtures/basic')), expectations.basic);
     });
 
 });
