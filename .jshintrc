@@ -1,0 +1,13 @@
+{
+  // Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  // Documentation: http://www.jshint.com/docs/options/
+  "node": true,
+  "globals": [
+    "describe",
+    "it"
+  ],
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "maxcomplexity": 5
+}

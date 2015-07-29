@@ -1,0 +1,25 @@
+{
+  "name": "requirements-mapper",
+  "version": "0.0.1",
+  "description": "Auto-require all matching files within a directory and return them as single object.",
+  "author": "Simon Lepel <simbo@simbo.de>",
+  "license": {
+    "type": "MIT",
+    "url": "http://simbo.mit-license.org/"
+  },
+  "private": true,
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "jshint": "./node_modules/.bin/jshint ./lib/*.js",
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.17",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "glob": "^5.0.14"
+  }
+}

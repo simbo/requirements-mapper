@@ -1,0 +1,66 @@
+###
+# Project related
+# ==================================================================
+
+
+
+
+###
+# Editors / IDEs / DevEnv
+# ==================================================================
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Node, Bower
+node_modules/
+npm-debug.log
+bower_components/
+v8.log
+
+
+###
+# Operating systems
+# ==================================================================
+
+# Linux
+*~
+.directory
+.ssh/
+
+# Windows
+thumbs.db
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+
+
+###
+# Other
+# ==================================================================
+
+*.tmp
+*.bak
+*.swp
+
+
+###
+# Do not ignore
+# ==================================================================
+
+!.gitignore
+!.gitkeep
