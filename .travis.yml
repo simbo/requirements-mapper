@@ -6,4 +6,4 @@ addons:
     repo_token: ded2e619c7821992a61edaa83fd9a9eb2f7716db67c946b8ff051a7d55d01a67
 after_script:
 - npm run cover
-- cat coverage/lcov.info | ./node_modules/.bin/codeclimate
+- cat coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter
