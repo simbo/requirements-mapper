@@ -15,6 +15,7 @@
     "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5"
