@@ -29,15 +29,15 @@ var expectations = {
 describe(pkgName, function() {
 
     it('should return recursively required contents of a directory as object', function() {
-        assert.deepEqual(pkg('fixtures/basic'), expectations.basic);
+        assert.deepEqual(new pkg('fixtures/basic').map(), expectations.basic);
     });
 
     it('should overwrite the required contents of a file if there is a directory with the same name on the same level', function() {
-        assert.deepEqual(pkg('fixtures/overwrite'), expectations.overwrite);
+        assert.deepEqual(new pkg('fixtures/overwrite').map(), expectations.overwrite);
     });
 
     it('should accept absolute paths', function() {
-        assert.deepEqual(pkg(path.join(process.cwd(), 'test/fixtures/basic')), expectations.basic);
+        assert.deepEqual(new pkg(path.join(process.cwd(), 'test/fixtures/basic')).map(), expectations.basic);
     });
 
 });

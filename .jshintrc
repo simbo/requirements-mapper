@@ -9,5 +9,6 @@
   "strict": true,
   "undef": true,
   "unused": true,
+  "validthis": true,
   "maxcomplexity": 5
 }
