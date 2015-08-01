@@ -7,8 +7,11 @@
     "type": "MIT",
     "url": "http://simbo.mit-license.org/"
   },
-  "private": true,
   "main": "lib/index.js",
+  "files": [
+    "lib/index.js",
+    "README.md"
+  ],
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
     "jshint": "./node_modules/.bin/jshint ./lib/*.js",
