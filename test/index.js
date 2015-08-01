@@ -23,6 +23,9 @@ var expectations = {
             foo: {
                 bar: true
             }
+        },
+        customGlob: {
+            foo: true
         }
     };
 
@@ -38,6 +41,20 @@ describe(pkgName, function() {
 
     it('should accept absolute paths', function() {
         assert.deepEqual(new Pkg(path.join(process.cwd(), 'test/fixtures/basic')).map(), expectations.basic);
+    });
+
+    it('should accept custom glob patterns', function() {
+        var p = new Pkg('fixtures/basic');
+        p.globPattern = '**/*.js';
+        assert.deepEqual(p.map(), expectations.customGlob);
+    });
+
+    it('should accept custom glob options', function() {
+        var p = new Pkg('fixtures/overwrite');
+        p.globOptions = {
+            ignore: 'foo/**/*.js?(on)'
+        };
+        assert.deepEqual(p.map(), expectations.customGlob);
     });
 
 });
