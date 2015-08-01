@@ -5,7 +5,7 @@ var assert = require('assert'),
 
 var pgkJson = require('../package.json'),
     pkgName = pgkJson.name,
-    pkg = require('..');
+    Pkg = require('..');
 
 var expectations = {
         basic: {
@@ -29,15 +29,15 @@ var expectations = {
 describe(pkgName, function() {
 
     it('should return recursively required contents of a directory as object', function() {
-        assert.deepEqual(new pkg('fixtures/basic').map(), expectations.basic);
+        assert.deepEqual(new Pkg('fixtures/basic').map(), expectations.basic);
     });
 
-    it('should overwrite the required contents of a file if there is a directory with the same name on the same level', function() {
-        assert.deepEqual(new pkg('fixtures/overwrite').map(), expectations.overwrite);
+    it('should overwrite existing properties depending on alphabetic order of found files and directories', function() {
+        assert.deepEqual(new Pkg('fixtures/overwrite').map(), expectations.overwrite);
     });
 
     it('should accept absolute paths', function() {
-        assert.deepEqual(new pkg(path.join(process.cwd(), 'test/fixtures/basic')).map(), expectations.basic);
+        assert.deepEqual(new Pkg(path.join(process.cwd(), 'test/fixtures/basic')).map(), expectations.basic);
     });
 
 });
