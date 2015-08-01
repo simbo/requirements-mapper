@@ -4,6 +4,9 @@
   "description": "Auto-require all matching files within a directory recursively and return them as single object, representing the directory's structure.",
   "author": "Simon Lepel <simbo@simbo.de>",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "git://github.com/simbo/requirements-mapper.git"
   },
   "main": "lib/index.js",
   "files": [
