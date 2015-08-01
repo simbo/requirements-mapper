@@ -14,5 +14,6 @@ deploy:
     repo: simbo/requirements-mapper
     all_branches: true
 after_script:
+- npm logout
 - npm run cover
 - cat coverage/lcov.info | ./node_modules/.bin/codeclimate-test-reporter
