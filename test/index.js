@@ -74,4 +74,8 @@ describe(pkgName, function() {
         assert.deepEqual(p.map(), expectations.fallback);
     });
 
+    it('should be possible to use relative paths when using it as submodule via require.', function() {
+        assert.deepEqual(require('./fixtures/module'), expectations.simple);
+    });
+
 });
