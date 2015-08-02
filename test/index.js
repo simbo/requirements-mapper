@@ -3,8 +3,8 @@
 var assert = require('assert'),
     path = require('path');
 
-var pgkJson = require('../package.json'),
-    pkgName = pgkJson.name,
+var pkgJson = require('../package.json'),
+    pkgName = pkgJson.name,
     Pkg = require('..');
 
 var expectations = {
