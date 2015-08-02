@@ -6,6 +6,7 @@ node_js:
 deploy:
   provider: npm
   email: simbo@simbo.de
+  api_key: ${NPM_API_KEY}
   on:
     tags: true
     repo: simbo/requirements-mapper
