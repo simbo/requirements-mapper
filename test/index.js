@@ -24,7 +24,7 @@ var expectations = {
                 bar: true
             }
         },
-        customGlob: {
+        simple: {
             foo: true
         },
         fallback: {
@@ -59,13 +59,13 @@ describe(pkgName, function() {
     it('should accept custom glob patterns', function() {
         var p = new Pkg('fixtures/basic');
         p.globPattern = '**/*.js';
-        assert.deepEqual(p.map(), expectations.customGlob);
+        assert.deepEqual(p.map(), expectations.simple);
     });
 
     it('should accept custom glob options', function() {
         var p = new Pkg('fixtures/overwrite');
         p.globOptions = {ignore: 'foo/**/*.js?(on)'};
-        assert.deepEqual(p.map(), expectations.customGlob);
+        assert.deepEqual(p.map(), expectations.simple);
     });
 
     it('should fallback to \'.\' when no directory is set', function() {
