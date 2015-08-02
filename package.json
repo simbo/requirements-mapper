@@ -1,6 +1,6 @@
 {
   "name": "requirements-mapper",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Auto-require all matching files within a directory recursively and return them as single object, representing the directory's structure.",
   "author": "Simon Lepel <simbo@simbo.de> (http://simbo.de)",
   "license": "MIT",
