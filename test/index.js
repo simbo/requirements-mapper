@@ -61,4 +61,11 @@ describe(pkgName, function() {
         assert.deepEqual(p.map(), expectations.basic);
     });
 
+    it('should fallback to \'.\' when no directory is set', function() {
+        var p = new Pkg();
+        p.globPattern = 'fixtures/basic/*.js';
+        assert.deepEqual(p.map(), {fixtures: {basic: expectations.customGlob}});
+    });
+
+
 });
