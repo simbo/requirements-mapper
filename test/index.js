@@ -57,4 +57,10 @@ describe(pkgName, function() {
         assert.deepEqual(p.map(), expectations.customGlob);
     });
 
+    it('should accept a cwd for globbing and require', function() {
+        var p = new Pkg();
+        p.cwd = path.join(process.cwd(), 'test/fixtures/basic');
+        assert.deepEqual(p.map(), expectations.basic);
+    });
+
 });
