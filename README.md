@@ -12,4 +12,6 @@ requirements-mapper
 [![Code Climate GPA](https://img.shields.io/codeclimate/github/simbo/requirements-mapper.svg?style=flat-square)](https://codeclimate.com/github/simbo/requirements-mapper)
 [![Code Climate Test Coverage](https://img.shields.io/codeclimate/coverage/github/simbo/requirements-mapper.svg?style=flat-square)](https://codeclimate.com/github/simbo/requirements-mapper)
 
+---
+
 # WORK IN PROGRESS
