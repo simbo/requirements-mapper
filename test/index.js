@@ -51,9 +51,7 @@ describe(pkgName, function() {
 
     it('should accept custom glob options', function() {
         var p = new Pkg('fixtures/overwrite');
-        p.globOptions = {
-            ignore: 'foo/**/*.js?(on)'
-        };
+        p.globOptions = {ignore: 'foo/**/*.js?(on)'};
         assert.deepEqual(p.map(), expectations.customGlob);
     });
 
