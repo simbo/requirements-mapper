@@ -10,8 +10,8 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.json]
-indent_size = 2
-
-[*.md]
+[{*.md,*.markdown}]
 trim_trailing_whitespace = false
+
+[{*.json,*.yml,*.js*rc}]
+indent_size = 2
