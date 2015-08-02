@@ -2,7 +2,7 @@
 # Project related
 # ==================================================================
 
-coverage/
+/coverage
 
 
 ###
@@ -14,10 +14,9 @@ coverage/
 *.sublime-project
 
 # Node, Bower
-node_modules/
+/node_modules
 npm-debug.log
-bower_components/
-v8.log
+/bower_components
 
 
 ###
