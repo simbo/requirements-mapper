@@ -28,9 +28,11 @@ var expectations = {
             foo: true
         },
         fallback: {
-            fixtures: {
-                basic: {
-                    foo: true
+            test: {
+                fixtures: {
+                    basic: {
+                        foo: true
+                    }
                 }
             }
         }
@@ -68,9 +70,9 @@ describe(pkgName, function() {
         assert.deepEqual(p.map(), expectations.simple);
     });
 
-    it('should fallback to \'.\' when no directory is set', function() {
+    it('should fallback to process.cwd() when no directory is set', function() {
         var p = new Pkg();
-        p.globPattern = 'fixtures/basic/*.js';
+        p.globPattern = 'test/fixtures/basic/*.js';
         assert.deepEqual(p.map(), expectations.fallback);
     });
 
