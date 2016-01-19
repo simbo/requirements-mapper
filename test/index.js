@@ -37,6 +37,11 @@ var expectations = {
         }
       }
     }
+  },
+  chars: {
+    badaBing: true,
+    barBaz: true,
+    booBaa: true
   }
 };
 
@@ -57,7 +62,8 @@ describe(pkgName, function() {
   });
 
   it('should overwrite existing properties depending on alphabetic order of found files and directories', function() {
-    assert.deepEqual(new Pkg('fixtures/overwrite').map(), expectations.overwrite);
+    var pkg = new Pkg('fixtures/overwrite');
+    assert.deepEqual(pkg.map(), expectations.overwrite);
   });
 
   it('should accept custom glob patterns', function() {
@@ -70,6 +76,11 @@ describe(pkgName, function() {
     var pkg = new Pkg('fixtures/overwrite');
     pkg.globOptions = {ignore: 'foo/**/*.js?(on)'};
     assert.deepEqual(pkg.map(), expectations.simple);
+  });
+
+  it('should sanitize filenames to camelcase', function() {
+    var pkg = new Pkg('fixtures/chars');
+    assert.deepEqual(pkg.map(), expectations.chars);
   });
 
   it('should fallback to process.cwd() when no directory is set', function() {
