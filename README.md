@@ -53,11 +53,12 @@ file will be returned by `RequirementsMapper.map()`:
 
 ### Options
 
-The constructor of `RequirementsMapper` accepts two parameters:
+The constructor of `RequirementsMapper` accepts 3 parameters:
 
   - `dir` - directory to scan; defaults to `process.cwd()`
   - `globPattern` - globbing pattern for finding files; defaults to
     `**/*.js?(on)`
+  - `clearCache` - clear the require cache for a node, before requiring it; defaults to `true`
 
 See [node-glob](https://github.com/isaacs/node-glob) for more details on 
 globbing options.

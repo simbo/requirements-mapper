@@ -49,6 +49,30 @@ describe(pkgName, function() {
     assert.deepEqual(pkg.map(), expectations.chars);
   });
 
+  it('should clear require cache by default', function(cb) {
+    var pkg = new Pkg('fixtures/cache'),
+        map1 = pkg.map(),
+        map2;
+    setTimeout(function() {
+      map2 = pkg.map();
+      assert.equal(typeof map1.microtime, 'number');
+      assert.equal(typeof map2.microtime, 'number');
+      assert.notEqual(map1.microtime, map2.microtime);
+      cb();
+    }, 5);
+  });
+
+  it('should allow to disable clearing require cache', function(cb) {
+    var pkg = new Pkg('fixtures/cache', null, false),
+        map1 = pkg.map(),
+        map2;
+    setTimeout(function() {
+      map2 = pkg.map();
+      assert.equal(map1.microtime, map2.microtime);
+      cb();
+    }, 5);
+  });
+
   it('should fallback to process.cwd() when no directory is set', function() {
     var pkg = new Pkg();
     pkg.globPattern = 'test/fixtures/basic/*.js';
