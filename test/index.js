@@ -9,41 +9,7 @@ var pkgJson = require('../package.json');
 
 var pkgName = pkgJson.name;
 
-var expectations = {
-  basic: {
-    bar: true,
-    baz: {
-      bada: true,
-      bing: true,
-      ping: {
-        pong: true
-      }
-    },
-    foo: true
-  },
-  overwrite: {
-    foo: {
-      bar: true
-    }
-  },
-  simple: {
-    foo: true
-  },
-  fallback: {
-    test: {
-      fixtures: {
-        basic: {
-          foo: true
-        }
-      }
-    }
-  },
-  chars: {
-    badaBing: true,
-    barBaz: true,
-    booBaa: true
-  }
-};
+var expectations = require('./expectations.json');
 
 describe(pkgName, function() {
 
