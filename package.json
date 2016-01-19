@@ -39,6 +39,7 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
+    "camel-case": "^1.2.2",
     "glob": "^6.0.4"
   }
 }
