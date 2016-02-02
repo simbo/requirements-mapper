@@ -28,6 +28,9 @@
     }
   },
   "chars": {
+    "fooBar": {
+      "bazBoo": true
+    },
     "badaBing": true,
     "barBaz": true,
     "booBaa": true

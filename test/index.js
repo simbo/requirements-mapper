@@ -44,7 +44,7 @@ describe(pkgName, function() {
     assert.deepEqual(pkg.map(), expectations.simple);
   });
 
-  it('should sanitize filenames to camelcase', function() {
+  it('should sanitize file and folder names to camelcase', function() {
     var pkg = new Pkg('fixtures/chars');
     assert.deepEqual(pkg.map(), expectations.chars);
   });
